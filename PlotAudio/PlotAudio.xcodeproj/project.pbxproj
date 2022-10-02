@@ -1,0 +1,448 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CD1B549128E7B84300C4C666 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = CD1B549028E7B84300C4C666 /* Credits.rtf */; };
+		CD1B549428E7B92400C4C666 /* Video Files in Resources */ = {isa = PBXBuildFile; fileRef = CD1B549228E7B92400C4C666 /* Video Files */; };
+		CD1B549528E7B92400C4C666 /* Audio Files in Resources */ = {isa = PBXBuildFile; fileRef = CD1B549328E7B92400C4C666 /* Audio Files */; };
+		CD1B54A728E8681E00C4C666 /* PlotAudioConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54A628E8681E00C4C666 /* PlotAudioConstants.swift */; };
+		CD1B54A928E8685800C4C666 /* PlotAudioObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54A828E8685800C4C666 /* PlotAudioObservable.swift */; };
+		CD1B54AB28E868AF00C4C666 /* AVAsset-extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54AA28E868AF00C4C666 /* AVAsset-extensions.swift */; };
+		CD1B54AD28E8690D00C4C666 /* PlotAudio.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54AC28E8690D00C4C666 /* PlotAudio.swift */; };
+		CD1B54AF28E8694000C4C666 /* PlotAudioWaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54AE28E8694000C4C666 /* PlotAudioWaveformView.swift */; };
+		CD1B54B128E8698900C4C666 /* PlotAudioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54B028E8698900C4C666 /* PlotAudioApp.swift */; };
+		CD1B54B328E869FB00C4C666 /* PlotAudioAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54B228E869FB00C4C666 /* PlotAudioAppView.swift */; };
+		CD1B54B528E86A2600C4C666 /* FileTableObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54B428E86A2600C4C666 /* FileTableObservable.swift */; };
+		CD1B54B728E86A4800C4C666 /* FileTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54B628E86A4800C4C666 /* FileTableView.swift */; };
+		CD1B54B928E86A7200C4C666 /* ControlViewObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54B828E86A7200C4C666 /* ControlViewObservable.swift */; };
+		CD1B54BB28E86AD500C4C666 /* ControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54BA28E86AD500C4C666 /* ControlView.swift */; };
+		CD1B54BD28E86B0200C4C666 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54BC28E86B0200C4C666 /* AudioPlayer.swift */; };
+		CD1B54BF28E86B3500C4C666 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1B54BE28E86B3500C4C666 /* File.swift */; };
+		CD4FE6E728E7987B0078D691 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE6E628E7987B0078D691 /* Assets.xcassets */; };
+		CD4FE6EB28E7987B0078D691 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE6EA28E7987B0078D691 /* Preview Assets.xcassets */; };
+		CD4FE6FF28E799270078D691 /* PlotAudio_ClockSample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE6F728E799270078D691 /* PlotAudio_ClockSample.m4a */; };
+		CD4FE70028E799270078D691 /* PlotAudio_PianoSample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE6F828E799270078D691 /* PlotAudio_PianoSample.m4a */; };
+		CD4FE70128E799270078D691 /* PlotAudio_TubaSample.m4a in Resources */ = {isa = PBXBuildFile; fileRef = CD4FE6F928E799270078D691 /* PlotAudio_TubaSample.m4a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		CD1B549028E7B84300C4C666 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		CD1B549228E7B92400C4C666 /* Video Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Video Files"; sourceTree = "<group>"; };
+		CD1B549328E7B92400C4C666 /* Audio Files */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "Audio Files"; sourceTree = "<group>"; };
+		CD1B54A628E8681E00C4C666 /* PlotAudioConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotAudioConstants.swift; sourceTree = "<group>"; };
+		CD1B54A828E8685800C4C666 /* PlotAudioObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotAudioObservable.swift; sourceTree = "<group>"; };
+		CD1B54AA28E868AF00C4C666 /* AVAsset-extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVAsset-extensions.swift"; sourceTree = "<group>"; };
+		CD1B54AC28E8690D00C4C666 /* PlotAudio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotAudio.swift; sourceTree = "<group>"; };
+		CD1B54AE28E8694000C4C666 /* PlotAudioWaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotAudioWaveformView.swift; sourceTree = "<group>"; };
+		CD1B54B028E8698900C4C666 /* PlotAudioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotAudioApp.swift; sourceTree = "<group>"; };
+		CD1B54B228E869FB00C4C666 /* PlotAudioAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlotAudioAppView.swift; sourceTree = "<group>"; };
+		CD1B54B428E86A2600C4C666 /* FileTableObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableObservable.swift; sourceTree = "<group>"; };
+		CD1B54B628E86A4800C4C666 /* FileTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileTableView.swift; sourceTree = "<group>"; };
+		CD1B54B828E86A7200C4C666 /* ControlViewObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlViewObservable.swift; sourceTree = "<group>"; };
+		CD1B54BA28E86AD500C4C666 /* ControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlView.swift; sourceTree = "<group>"; };
+		CD1B54BC28E86B0200C4C666 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		CD1B54BE28E86B3500C4C666 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		CD4FE6DF28E7987A0078D691 /* PlotAudio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlotAudio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CD4FE6E628E7987B0078D691 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CD4FE6E828E7987B0078D691 /* PlotAudio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PlotAudio.entitlements; sourceTree = "<group>"; };
+		CD4FE6EA28E7987B0078D691 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CD4FE6F728E799270078D691 /* PlotAudio_ClockSample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlotAudio_ClockSample.m4a; sourceTree = "<group>"; };
+		CD4FE6F828E799270078D691 /* PlotAudio_PianoSample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlotAudio_PianoSample.m4a; sourceTree = "<group>"; };
+		CD4FE6F928E799270078D691 /* PlotAudio_TubaSample.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = PlotAudio_TubaSample.m4a; sourceTree = "<group>"; };
+		CD4FE70328E79FCF0078D691 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CD4FE6DC28E7987A0078D691 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CD4FE6D628E7987A0078D691 = {
+			isa = PBXGroup;
+			children = (
+				CD4FE6E128E7987A0078D691 /* PlotAudio */,
+				CD4FE6E028E7987A0078D691 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CD4FE6E028E7987A0078D691 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FE6DF28E7987A0078D691 /* PlotAudio.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CD4FE6E128E7987A0078D691 /* PlotAudio */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FE70328E79FCF0078D691 /* Info.plist */,
+				CD4FE6F128E799270078D691 /* PlotAudio */,
+				CD1B54B028E8698900C4C666 /* PlotAudioApp.swift */,
+				CD1B54B228E869FB00C4C666 /* PlotAudioAppView.swift */,
+				CD1B54B428E86A2600C4C666 /* FileTableObservable.swift */,
+				CD1B54B628E86A4800C4C666 /* FileTableView.swift */,
+				CD1B54B828E86A7200C4C666 /* ControlViewObservable.swift */,
+				CD1B54BA28E86AD500C4C666 /* ControlView.swift */,
+				CD1B54BC28E86B0200C4C666 /* AudioPlayer.swift */,
+				CD1B54BE28E86B3500C4C666 /* File.swift */,
+				CD1B549328E7B92400C4C666 /* Audio Files */,
+				CD1B549228E7B92400C4C666 /* Video Files */,
+				CD4FE6E628E7987B0078D691 /* Assets.xcassets */,
+				CD4FE6E828E7987B0078D691 /* PlotAudio.entitlements */,
+				CD1B549028E7B84300C4C666 /* Credits.rtf */,
+				CD4FE6E928E7987B0078D691 /* Preview Content */,
+			);
+			path = PlotAudio;
+			sourceTree = "<group>";
+		};
+		CD4FE6E928E7987B0078D691 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FE6EA28E7987B0078D691 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		CD4FE6F128E799270078D691 /* PlotAudio */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FE6F628E799270078D691 /* Audio Samples */,
+				CD1B54A628E8681E00C4C666 /* PlotAudioConstants.swift */,
+				CD1B54A828E8685800C4C666 /* PlotAudioObservable.swift */,
+				CD1B54AE28E8694000C4C666 /* PlotAudioWaveformView.swift */,
+				CD1B54AC28E8690D00C4C666 /* PlotAudio.swift */,
+				CD1B54AA28E868AF00C4C666 /* AVAsset-extensions.swift */,
+			);
+			path = PlotAudio;
+			sourceTree = "<group>";
+		};
+		CD4FE6F628E799270078D691 /* Audio Samples */ = {
+			isa = PBXGroup;
+			children = (
+				CD4FE6F728E799270078D691 /* PlotAudio_ClockSample.m4a */,
+				CD4FE6F828E799270078D691 /* PlotAudio_PianoSample.m4a */,
+				CD4FE6F928E799270078D691 /* PlotAudio_TubaSample.m4a */,
+			);
+			path = "Audio Samples";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CD4FE6DE28E7987A0078D691 /* PlotAudio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CD4FE6EE28E7987B0078D691 /* Build configuration list for PBXNativeTarget "PlotAudio" */;
+			buildPhases = (
+				CD4FE6DB28E7987A0078D691 /* Sources */,
+				CD4FE6DC28E7987A0078D691 /* Frameworks */,
+				CD4FE6DD28E7987A0078D691 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlotAudio;
+			productName = PlotAudio;
+			productReference = CD4FE6DF28E7987A0078D691 /* PlotAudio.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CD4FE6D728E7987A0078D691 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				ORGANIZATIONNAME = "Limit Point LLC";
+				TargetAttributes = {
+					CD4FE6DE28E7987A0078D691 = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+				};
+			};
+			buildConfigurationList = CD4FE6DA28E7987A0078D691 /* Build configuration list for PBXProject "PlotAudio" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CD4FE6D628E7987A0078D691;
+			productRefGroup = CD4FE6E028E7987A0078D691 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD4FE6DE28E7987A0078D691 /* PlotAudio */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CD4FE6DD28E7987A0078D691 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1B549528E7B92400C4C666 /* Audio Files in Resources */,
+				CD4FE6EB28E7987B0078D691 /* Preview Assets.xcassets in Resources */,
+				CD1B549128E7B84300C4C666 /* Credits.rtf in Resources */,
+				CD4FE70128E799270078D691 /* PlotAudio_TubaSample.m4a in Resources */,
+				CD4FE6FF28E799270078D691 /* PlotAudio_ClockSample.m4a in Resources */,
+				CD4FE70028E799270078D691 /* PlotAudio_PianoSample.m4a in Resources */,
+				CD1B549428E7B92400C4C666 /* Video Files in Resources */,
+				CD4FE6E728E7987B0078D691 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CD4FE6DB28E7987A0078D691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD1B54B728E86A4800C4C666 /* FileTableView.swift in Sources */,
+				CD1B54B528E86A2600C4C666 /* FileTableObservable.swift in Sources */,
+				CD1B54B128E8698900C4C666 /* PlotAudioApp.swift in Sources */,
+				CD1B54A928E8685800C4C666 /* PlotAudioObservable.swift in Sources */,
+				CD1B54AD28E8690D00C4C666 /* PlotAudio.swift in Sources */,
+				CD1B54AB28E868AF00C4C666 /* AVAsset-extensions.swift in Sources */,
+				CD1B54B328E869FB00C4C666 /* PlotAudioAppView.swift in Sources */,
+				CD1B54B928E86A7200C4C666 /* ControlViewObservable.swift in Sources */,
+				CD1B54BB28E86AD500C4C666 /* ControlView.swift in Sources */,
+				CD1B54A728E8681E00C4C666 /* PlotAudioConstants.swift in Sources */,
+				CD1B54BF28E86B3500C4C666 /* File.swift in Sources */,
+				CD1B54BD28E86B0200C4C666 /* AudioPlayer.swift in Sources */,
+				CD1B54AF28E8694000C4C666 /* PlotAudioWaveformView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		CD4FE6EC28E7987B0078D691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CD4FE6ED28E7987B0078D691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		CD4FE6EF28E7987B0078D691 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlotAudio/PlotAudio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlotAudio/Preview Content\"";
+				DEVELOPMENT_TEAM = GZABHNF58X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlotAudio/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.limit-point.PlotAudio";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CD4FE6F028E7987B0078D691 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PlotAudio/PlotAudio.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"PlotAudio/Preview Content\"";
+				DEVELOPMENT_TEAM = GZABHNF58X;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PlotAudio/Info.plist;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.limit-point.PlotAudio";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CD4FE6DA28E7987A0078D691 /* Build configuration list for PBXProject "PlotAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4FE6EC28E7987B0078D691 /* Debug */,
+				CD4FE6ED28E7987B0078D691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CD4FE6EE28E7987B0078D691 /* Build configuration list for PBXNativeTarget "PlotAudio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CD4FE6EF28E7987B0078D691 /* Debug */,
+				CD4FE6F028E7987B0078D691 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CD4FE6D728E7987A0078D691 /* Project object */;
+}
