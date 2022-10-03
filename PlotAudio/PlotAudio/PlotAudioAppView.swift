@@ -15,13 +15,11 @@ struct PlotAudioAppView: View {
     @ObservedObject var plotAudioObservable: PlotAudioObservable
     @ObservedObject var fileTableObservable:FileTableObservable
     @ObservedObject var controlViewObservable: ControlViewObservable
-    
-    @State private var mediaType: MediaType = .audio
-    
+        
     var body: some View {
         ScrollView {
             VStack {
-                Picker("Media Type", selection: $mediaType) {
+                Picker("Media Type", selection: $fileTableObservable.mediaType) {
                     ForEach(MediaType.allCases) { type in
                         Text(type.rawValue.capitalized)
                     }
@@ -38,7 +36,7 @@ struct PlotAudioAppView: View {
                     }
                     .frame(minHeight: 300)
                 
-                if mediaType == .video {
+                if fileTableObservable.mediaType == .video {
                     VideoPlayer(player: controlViewObservable.videoPlayer)
                         .frame(minHeight: 300)
                 }
@@ -47,9 +45,8 @@ struct PlotAudioAppView: View {
                 
                 ControlView(controlViewObservable: controlViewObservable)
             }
-            .onChange(of: mediaType) { newMediaType in
+            .onChange(of: fileTableObservable.mediaType) { newMediaType in
                 controlViewObservable.stopMedia()
-                fileTableObservable.mediaType = newMediaType
                 controlViewObservable.mediaType = newMediaType
                 fileTableObservable.selectIndex(3)
             }
