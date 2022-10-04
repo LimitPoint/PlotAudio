@@ -103,7 +103,7 @@ struct PlotAudioWaveformView_Previews: PreviewProvider {
         VStack {
             PlotAudioWaveformView(plotAudioObservable: PlotAudioObservable(url: kClockURL, pathGradient: true, pathFrame: true, barWidth: 3, barSpacing: 2))
             
-            PlotAudioWaveformView(plotAudioObservable: PlotAudioObservable(url: kTubaURL, pathGradient: true, barWidth: 3, barSpacing: 2, frameSize: CGSize(width: 300, height: 200)))
+            PlotAudioWaveformView(plotAudioObservable: PlotAudioObservable(url: kTubaURL, pathGradient: true, barWidth: 10, barSpacing: 2, frameSize: CGSize(width: 300, height: 200)))
             
             PlotAudioWaveformView(plotAudioObservable: PlotAudioObservable(asset: AVAsset(url: kPianoURL)))
         }
