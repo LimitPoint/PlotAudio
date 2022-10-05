@@ -78,24 +78,30 @@ class ControlViewObservable: ObservableObject, AudioPlayerDelegate, PlotAudioDel
         }
         .store(in: &cancelBag)
         
-        $mediaType.sink { [weak self] _ in
-            DispatchQueue.main.async {
-                self?.plotAudioObservable.plotAudio()
+        $mediaType.sink { [weak self] newMediaType in
+            if newMediaType != self?.mediaType {
+                DispatchQueue.main.async {
+                    self?.plotAudioObservable.plotAudio()
+                }
             }
+            
         }.store(in: &cancelBag)
         
-        $aspectFactor.sink { [weak self] _ in
-            DispatchQueue.main.async {
-                
-                if self?.originalFrameSize == nil {
-                    self?.originalFrameSize = self?.plotAudioObservable.frameSize
-                }
-                
-                if let originalFrameSize = self?.originalFrameSize, let aspectFactor = self?.aspectFactor {
-                    let newHeight = originalFrameSize.height * aspectFactor
-                    self?.plotAudioObservable.frameSize = CGSize(width: originalFrameSize.width, height: newHeight)
+        $aspectFactor.sink { [weak self] newAspectFactor in
+            if newAspectFactor != self?.aspectFactor {
+                DispatchQueue.main.async {
+                    
+                    if self?.originalFrameSize == nil {
+                        self?.originalFrameSize = self?.plotAudioObservable.frameSize
+                    }
+                    
+                    if let originalFrameSize = self?.originalFrameSize, let aspectFactor = self?.aspectFactor {
+                        let newHeight = originalFrameSize.height * aspectFactor
+                        self?.plotAudioObservable.frameSize = CGSize(width: originalFrameSize.width, height: newHeight)
+                    }
                 }
             }
+            
         }.store(in: &cancelBag)
     }
     

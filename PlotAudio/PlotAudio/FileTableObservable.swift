@@ -67,7 +67,10 @@ class FileTableObservable: ObservableObject {
         }.store(in: &cancelBag)
         
         $mediaType.sink { [weak self] newMediaType in
-            self?.loadFiles(mediaType: newMediaType)
+            if newMediaType != self?.mediaType {
+                self?.loadFiles(mediaType: newMediaType)
+            }
+            
         }.store(in: &cancelBag)
     }
 }

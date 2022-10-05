@@ -143,11 +143,12 @@ class PlotAudioObservable: ObservableObject  {
             
         }.store(in: &cancelBag)
         
-        $pathAntialias.sink { [weak self] _ in
-            DispatchQueue.main.async {
-                self?.plotAudio()
+        $pathAntialias.sink { [weak self] newPathAntialias in
+            if self?.pathAntialias != newPathAntialias {
+                DispatchQueue.main.async {
+                    self?.plotAudio()
+                }
             }
-            
         }.store(in: &cancelBag)
         
     }
