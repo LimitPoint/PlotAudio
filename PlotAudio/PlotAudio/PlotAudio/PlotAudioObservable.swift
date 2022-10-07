@@ -122,9 +122,30 @@ class PlotAudioObservable: ObservableObject  {
         }
         .store(in: &cancelBag)
         
-        $fillIndicator.sink { [weak self] _ in
+        $noiseFloor.sink { [weak self] _ in
             DispatchQueue.main.async {
-                self?.updatePaths()
+                self?.plotAudio()
+            }
+        }
+        .store(in: &cancelBag)
+        
+        $barWidth.sink { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.plotAudio()
+            }
+        }
+        .store(in: &cancelBag)
+        
+        $barSpacing.sink { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.plotAudio()
+            }
+        }
+        .store(in: &cancelBag)
+        
+        $downsampleRateSeconds.sink { [weak self] _ in
+            DispatchQueue.main.async {
+                self?.plotAudio()
             }
         }
         .store(in: &cancelBag)

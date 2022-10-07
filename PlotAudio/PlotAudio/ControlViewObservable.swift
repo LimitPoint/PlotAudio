@@ -64,20 +64,6 @@ class ControlViewObservable: ObservableObject, AudioPlayerDelegate, PlotAudioDel
             self?.objectWillChange.send() 
         }.store(in: &cancelBag)
         
-        $fileTableObservable.sink { [weak self] _ in
-            DispatchQueue.main.async {
-                self?.plotAudioObservable.plotAudio()
-            }
-        }
-        .store(in: &cancelBag)
-        
-        $plotAudioObservable.sink { [weak self] _ in
-            DispatchQueue.main.async {
-                self?.plotAudioObservable.plotAudio()
-            }
-        }
-        .store(in: &cancelBag)
-        
         $mediaType.sink { [weak self] newMediaType in
             if newMediaType != self?.mediaType {
                 DispatchQueue.main.async {
