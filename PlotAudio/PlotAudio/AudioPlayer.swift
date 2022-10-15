@@ -2,6 +2,9 @@
 //  AudioPlayer.swift
 //  PlotAudio
 //
+//  Read discussion at:
+//  http://www.limit-point.com/blog/2022/plot-audio/#AudioPlayer
+//
 //  Created by Joseph Pagliaro on 10/1/22.
 //  Copyright © 2022 Limit Point LLC. All rights reserved.
 //
