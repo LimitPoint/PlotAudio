@@ -123,9 +123,9 @@ class DownsampleAudio {
             
             while audioReader.status == .reading {
                 
-                autoreleasepool { () -> Void in
+                autoreleasepool { [weak self] in
                     
-                    if let sampleBuffer = audioReaderOutput.copyNextSampleBuffer(), let bufferSamples = self.extractSamples(sampleBuffer) {
+                    if let sampleBuffer = audioReaderOutput.copyNextSampleBuffer(), let bufferSamples = self?.extractSamples(sampleBuffer) {
                         audioSamples.append(contentsOf: bufferSamples)
                     }
                     else {
@@ -187,9 +187,9 @@ class DownsampleAudio {
             
             while audioReader.status == .reading {
                 
-                autoreleasepool { () -> Void in
+                autoreleasepool { [weak self] in
                     
-                    if let sampleBuffer = audioReaderOutput.copyNextSampleBuffer(), let bufferSamples = self.extractSamples(sampleBuffer) {
+                    if let sampleBuffer = audioReaderOutput.copyNextSampleBuffer(), let bufferSamples = self?.extractSamples(sampleBuffer) {
                         
                         audioSamples.append(contentsOf: bufferSamples)
                         
@@ -229,7 +229,12 @@ class DownsampleAudio {
     }
     
     func run(asset:AVAsset, downsampleCount:Int, downsampleRateSeconds:Int?, completion: @escaping ([Double]?) -> ()) {
-        downsampleAudioQueue.async {
+        downsampleAudioQueue.async { [weak self] in
+            
+            guard let self = self else {
+                return
+            }
+            
             if let downsampleRateSeconds = downsampleRateSeconds {
                 self.readAndDownsampleAudioSamples(asset: asset, downsampleCount: downsampleCount, downsampleRateSeconds: downsampleRateSeconds) { audioSamples in
                     print("audio downsampled progressively")

@@ -23,6 +23,7 @@ protocol PlotAudioDelegate : AnyObject  {
 class PlotAudioObservable: ObservableObject  {
     
     weak var plotAudioDelegate:PlotAudioDelegate?
+    var downsampleAudio:DownsampleAudio?
     
     @Published var asset:AVAsset?
     
@@ -58,7 +59,9 @@ class PlotAudioObservable: ObservableObject  {
         
         audioDuration = asset.duration.seconds
         
-        DownsampleAudio(noiseFloor: Double(self.noiseFloor), antialias: pathAntialias).run(asset: asset, downsampleCount: self.downsampleCount(), downsampleRateSeconds: downsampleRateSeconds) { audioSamples in
+        downsampleAudio = DownsampleAudio(noiseFloor: Double(self.noiseFloor), antialias: pathAntialias)
+        
+        downsampleAudio?.run(asset: asset, downsampleCount: self.downsampleCount(), downsampleRateSeconds: downsampleRateSeconds) { audioSamples in
             DispatchQueue.main.async { [weak self] in
                 self?.audioSamples = audioSamples
                 self?.isPlotting = false
@@ -178,7 +181,7 @@ class PlotAudioObservable: ObservableObject  {
     }
     
     deinit {
-        print("PlotAudioObservable deinited")
+        print("PlotAudioObservable deinit")
     }
 }
 
