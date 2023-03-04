@@ -88,6 +88,8 @@ struct AspectFactorView: View {
             } onEditingChanged: { editing in
                 editingChanged = editing
             }
+            
+            Text("Aspect Factor")
         }
         .padding()
     }
@@ -114,7 +116,7 @@ struct PlotOptionsView: View {
         AspectFactorView(controlViewObservable: controlViewObservable)
         
         Toggle(isOn: $controlViewObservable.plotAudioObservable.pathFrame) {
-            Text("Frame")
+            Text("Frame Path")
         }
         .padding()
         
@@ -130,7 +132,7 @@ struct BarsOptionsView: View {
         HStack {
             VStack {
                 HStack {
-                    Text("Width")
+                    Text("Bar Width")
                     Picker(selection: $controlViewObservable.plotAudioObservable.barWidth,
                            label: EmptyView(),
                            content: {
@@ -178,8 +180,14 @@ struct PreprocessOptionsView: View {
         .pickerStyle(.segmented)
         .frame(width: 300)
         
+#if os(iOS)
+        Text("Noise Floor")
+            .font(.footnote).frame(width: 300)
+            .padding()
+#endif
+        
         Toggle(isOn: $controlViewObservable.plotAudioObservable.pathAntialias) {
-            Text("Anti-Alias")
+            Text("Decimate with averaging (anti-alias)")
         }
         .padding()
         
@@ -193,10 +201,13 @@ struct PreprocessOptionsView: View {
         }
         .pickerStyle(.segmented)
         .frame(width: 300)
+        .padding()
         
-        Text("Changing downsample rate seconds will not affect the plot, only the memory required to process data.")
+#if os(iOS)       
+        Text("Downsample Rate (seconds)")
             .font(.footnote).frame(width: 300)
             .padding()
+#endif
     }
 }
 
