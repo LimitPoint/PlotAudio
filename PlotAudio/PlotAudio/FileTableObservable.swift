@@ -76,5 +76,9 @@ class FileTableObservable: ObservableObject {
             
         }.store(in: &cancelBag)
     }
+    
+    deinit {
+        print("FileTableObservable deinit")
+    }
 }
 

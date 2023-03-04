@@ -94,6 +94,10 @@ class ControlViewObservable: ObservableObject, AudioPlayerDelegate, PlotAudioDel
         }.store(in: &cancelBag)
     }
     
+    deinit {
+        print("ControlViewObservable deinit")
+    }
+    
     func updatePlayer(_ url:URL) {
         let asset = AVAsset(url: url)
         videoDuration = asset.duration.seconds

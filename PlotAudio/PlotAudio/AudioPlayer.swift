@@ -11,7 +11,7 @@
 
 import AVFoundation
 
-protocol AudioPlayerDelegate {
+protocol AudioPlayerDelegate: AnyObject { // AnyObject - required for AudioPlayer's weak reference for delegate (only reference types can have weak reference to prevent retain cycle)
     func audioPlayProgress(_ player:AudioPlayer?, percent: CGFloat)
     func audioPlayDone(_ player:AudioPlayer?)
 }
@@ -21,7 +21,7 @@ class AudioPlayer: NSObject, AVAudioPlayerDelegate {
     var audioPlayer: AVAudioPlayer?
     var timer:Timer?
     
-    var delegate: AudioPlayerDelegate?
+    weak var delegate: AudioPlayerDelegate?
     
     deinit {
         stopTimer()

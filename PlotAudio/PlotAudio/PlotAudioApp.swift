@@ -139,31 +139,17 @@ func DecimationExample(audioSamples:[Int16], desiredSize:Int) {
 @main
 struct PlotAudioApp: App {
     
-    var plotAudioObservable: PlotAudioObservable
-    var fileTableObservable: FileTableObservable
-    var controlViewObservable: ControlViewObservable
-    
     init() {
-        
-        plotAudioObservable = PlotAudioObservable()
-        fileTableObservable = FileTableObservable()
-        controlViewObservable = ControlViewObservable(plotAudioObservable: plotAudioObservable, fileTableObservable: fileTableObservable)
-        
-            // customize
-        plotAudioObservable.pathGradient = true
-        plotAudioObservable.barWidth = 3
-        plotAudioObservable.barSpacing = 2
-        
-            // examples
+            // blog examples
         DecimationExample(audioSamples:[3,2,1,2,2,1,7], desiredSize:2)
         DecibelExample() 
-        
     }
     
     var body: some Scene {
         WindowGroup {
-            PlotAudioAppView(plotAudioObservable: plotAudioObservable, fileTableObservable: fileTableObservable, controlViewObservable: controlViewObservable)
+            PlotAudioAppView(controlViewObservable: ControlViewObservable(plotAudioObservable: PlotAudioObservable(), fileTableObservable: FileTableObservable()))
         }
+        
     }
 }
 
