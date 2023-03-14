@@ -108,7 +108,15 @@ class ControlViewObservable: ObservableObject, AudioPlayerDelegate, PlotAudioDel
         }
         self.videoPlayerPeriodicTimeObserver = self.videoPlayer.addPeriodicTimeObserver(forInterval: CMTime(value: 1, timescale: 30), queue: nil) { [weak self] cmTime in
             if let duration = self?.videoDuration {
-                self?.plotAudioObservable.indicatorPercent = cmTime.seconds / duration
+                if cmTime.seconds == duration {
+                    self?.isPlaying = false
+                    self?.isPaused = false
+                    self?.plotAudioObservable.indicatorPercent = 0
+                }
+                else {
+                    self?.plotAudioObservable.indicatorPercent = cmTime.seconds / duration
+                }
+                
             }
         }
     }
