@@ -13,7 +13,7 @@ import AVFoundation
 
 protocol AudioPlayerDelegate: AnyObject { // AnyObject - required for AudioPlayer's weak reference for delegate (only reference types can have weak reference to prevent retain cycle)
     func audioPlayProgress(_ player:AudioPlayer?, percent: CGFloat)
-    func audioPlayDone(_ player:AudioPlayer?)
+    func audioPlayDone(_ player:AudioPlayer?, percent: CGFloat)
 }
 
 class AudioPlayer: NSObject, AVAudioPlayerDelegate {
@@ -40,7 +40,7 @@ class AudioPlayer: NSObject, AVAudioPlayerDelegate {
         if let audioPlayer = audioPlayer,  audioPlayer.isPlaying {
             audioPlayer.stop() // this won't invoke 'audioPlayerDidFinishPlaying'
             stopTimer()
-            delegate?.audioPlayDone(self)
+            delegate?.audioPlayDone(self, percent: audioPlayer.currentTime / audioPlayer.duration)
         }
     }
     
@@ -82,7 +82,7 @@ class AudioPlayer: NSObject, AVAudioPlayerDelegate {
     
     func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
         stopTimer()
-        delegate?.audioPlayDone(self)
+        delegate?.audioPlayDone(self, percent: 0)
     }
     
     func play(percent:Double) {
