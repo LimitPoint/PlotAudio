@@ -137,10 +137,15 @@ class ControlViewObservable: ObservableObject, AudioPlayerDelegate, PlotAudioDel
     
         // AudioPlayerDelegate
         // set delegate in init!
-    func audioPlayDone(_ player: AudioPlayer?) {
-        isPlaying = false
-        isPaused = false
-        plotAudioObservable.indicatorPercent = 0
+    func audioPlayDone(_ player: AudioPlayer?, percent: CGFloat) {
+        if isPlaying == false {
+            plotAudioObservable.indicatorPercent = 0
+        }
+        else {
+            isPlaying = false
+            isPaused = false
+            plotAudioObservable.indicatorPercent = percent
+        }
     }
     
         // AudioPlayerDelegate
