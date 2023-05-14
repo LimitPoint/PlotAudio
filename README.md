@@ -1,4 +1,4 @@
-![PlotAudio](http://www.limit-point.com/assets/images/PlotAudio.jpg)
+![PlotAudio](https://www.limit-point.com/assets/images/PlotAudio.jpg)
 # PlotAudio
 ## Draws audio waveforms
 
@@ -16,7 +16,7 @@ Tap on a file in the list to plot its audio.
 
 Adjust controls for appearance and drag or tap on the audio plot to set play locations.
 
-<img src="http://www.limit-point.com/assets/images/PlotAudio_PlotIndicator_Wavvy.jpg" height="64">
+<img src="https://www.limit-point.com/assets/images/PlotAudio_PlotIndicator_Wavvy.jpg" height="64">
 
 The core files that implement preparing and plotting audio data in a view: 
 
