@@ -13,6 +13,15 @@ import AVFoundation
 import Accelerate
 import SwiftUI
 
+func getOSMajorVersion() -> Int {
+    return ProcessInfo.processInfo.operatingSystemVersion.majorVersion
+}
+
+func getOSVersion() -> Float {
+    let version = ProcessInfo.processInfo.operatingSystemVersion
+    return Float(version.majorVersion) + Float(version.minorVersion) * 0.1
+}
+
 let kPAAudioReaderSettings = [
     AVFormatIDKey: Int(kAudioFormatLinearPCM) as AnyObject,
     AVLinearPCMBitDepthKey: 16 as AnyObject,
@@ -95,8 +104,16 @@ class DownsampleAudio {
         let downsamplesLength = Int(audioSamplesD.count / decimationFactor)
         var downsamples = [Double](repeating: 0.0, count:downsamplesLength)
         
+        #if os(macOS)
         vDSP_desampD(audioSamplesD, vDSP_Stride(decimationFactor), filter, &downsamples, vDSP_Length(downsamplesLength), vDSP_Length(filter.count))
-        
+        #else
+        if getOSMajorVersion() >= 17 {
+            vDSP.downsample(audioSamplesD, decimationFactor: decimationFactor, filter: filter, result: &downsamples)
+        } else {
+            vDSP_desampD(audioSamplesD, vDSP_Stride(decimationFactor), filter, &downsamples, vDSP_Length(downsamplesLength), vDSP_Length(filter.count))
+        }
+        #endif
+    
         return downsamples
     }
     
@@ -195,7 +212,7 @@ class DownsampleAudio {
                         
                         if audioSamples.count > audioSampleSizeThreshold {
                             
-                            if let audioSamplesDownsamples = downsample(audioSamples, decimationFactor: decimationFactor)  {
+                            if let audioSamplesDownsamples = self?.downsample(audioSamples, decimationFactor: decimationFactor)  {
                                 downsamples.append(contentsOf: audioSamplesDownsamples)
                             }
                             
